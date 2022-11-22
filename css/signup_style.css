@@ -1,0 +1,202 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4070f4;
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+    
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+.header{
+    position: absolute;
+    background: none repeat scroll 0 0 #ffffff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    height: 50px;
+    top: 0;
+    width: 100%;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0;
+}
+.header img{
+    position: absolute;
+    margin: 5px 10px 0px ;
+    width: 40px;
+    height: 40px;
+}
+.header label{
+    position: absolute;
+    padding: 10px 55px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.container{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.container .signup-login{
+    text-align: center;
+    margin-bottom: -15px;
+    font-size: 14px;
+}
+.signup-login a{
+    color: #4070f4;
+    text-decoration: none;
+}
+.signup-login a:hover{
+    text-decoration: underline;
+}
+.form.first .form-group{
+    transition: all .3s;
+}
+.form.first .form-label{
+    color: #aaa;
+    display: block;
+    opacity: 1;
+    transform: translateY(-2em);
+    padding-left: 10px;
+    transform-origin: 0 0;
+    transform: all .3s;
+}
+.form.first .form-group span{
+    margin-top: -19px;
+}
+.form.first .form-group .form-control{
+    transform: all .5s;
+    padding: 5px;
+}
+.form.first .form-group .form-control::placeholder{
+    color: transparent;
+}
+.form.first .form-group .form-control:focus + .form-label, .form.first .form-group .form-control:not(:placeholder-shown) + .form-label{
+    transform: translateY(-3em) scale(.8);
+    padding-left: 10px;
+    margin-left: 10px;
+    color: black;
+    background-color: white;
+}
+
+
+
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.show-course {
+    display: flex;
+}
+.hide-course {
+    display: none;
+}
+form .fields .form-group, .show-course {
+    display: flex;
+    width: calc(100% /  - 15px);
+    flex-direction: column;
+    margin: 4px 7px 5px;
+    flex-grow: 1;
+}
+.container form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    background-color: #4070f4;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #265df2;
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+footer[for="login"] {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    padding-top: 12px;
+    font-weight: 300;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .form-group, .show-course{
+        width: calc(100% / 2 - 15px);
+    }
+}
+@media (max-width: 550px) {
+    form .fields .form-group, .show-course{
+        width: 100%;
+    }
+}
